@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (from && to) {
             const rate = await fetchExchangeRate(from, to);
             const convertedAmount = (amount * rate).toFixed(2);
-            resultDiv.textContent = `${amount.toFixed(2)} ${from} = ${convertedAmount} ${to}`;
+            resultDiv.textContent = `${convertedAmount} ${to}`;
         } else {
             resultDiv.textContent = 'Por favor, insira um valor válido e selecione as moedas.';
         }
