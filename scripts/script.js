@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para buscar a lista de moedas
     async function fetchCurrencies() {
-        const response = await fetch(`https://open.er-api.com/v6/latest/USD`);
+        const response = await fetch(`https://open.er-api.com/v6/latest/BRL`);
         const data = await response.json();
         populateSelect(fromCurrency, data.rates);
         populateSelect(toCurrency, data.rates);
