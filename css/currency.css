@@ -189,6 +189,7 @@ input::-webkit-inner-spin-button {
     padding: 20px;
     width: 70%;
     height: 80%;
+    margin-bottom: 40px;
   }
 
   img {
