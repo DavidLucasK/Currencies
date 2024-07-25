@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="./css/currency.css">
+</head>
+<body>
+    <div class="container">
+      <a href="https://davidlucas.vercel.app/" rel="noopener noreferrer" target="_blank">
+        <img src="./assets/Logo-rounded.png" alt="Logo">
+      </a>
+        <h1>Conversor de Moedas</h1>
+        <div class="converter">
+            <div class="field">
+                <label for="amount">Valor:</label>
+                <input type="number" id="amount" placeholder="Digite o valor" required>
+            </div>
+            <div class="field">
+                <label for="fromCurrency">De:</label>
+                <select id="fromCurrency">
+                    <!-- Opções serão preenchidas pelo JavaScript -->
+                </select>
+            </div>
+            <div class="field">
+                <label for="toCurrency">Para:</label>
+                <select id="toCurrency">
+                    <!-- Opções serão preenchidas pelo JavaScript -->
+                </select>
+            </div>
+            <button id="convertBtn">Converter</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
