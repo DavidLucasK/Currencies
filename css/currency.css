@@ -9,6 +9,7 @@ body {
   background: linear-gradient(90deg, #190555, #340ea5, #7b30d0, #190555) no-repeat;
   background-size: 200% 200%;
   color: white;
+  overflow-y: hidden;
 }
 
 img {

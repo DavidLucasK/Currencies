@@ -62,12 +62,19 @@ document.addEventListener("DOMContentLoaded", function() {
             return; // Interrompe a execução se as moedas forem iguais
         }
 
-        if (amount && from && to) {
-            const rate = await fetchExchangeRate(from, to);
-            const convertedAmount = (parseFloat(amount) * rate).toFixed(2);
-            resultDiv.textContent = `${convertedAmount} ${to}`;
-        } else {
-            resultDiv.textContent = 'Por favor, insira um valor válido e selecione as moedas.';
+        if (amount > 0 || amount == null) 
+        {
+            if (amount && from && to) {
+                const rate = await fetchExchangeRate(from, to);
+                const convertedAmount = (parseFloat(amount) * rate).toFixed(2);
+                resultDiv.textContent = `${convertedAmount} ${to}`;
+            } else {
+                resultDiv.textContent = 'Por favor, insira um valor válido.';
+            }
+        }
+        else 
+        {
+            resultDiv.textContent = 'Por favor, insira um valor maior que 0.';
         }
     });
 
