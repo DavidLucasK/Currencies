@@ -34,47 +34,45 @@ document.addEventListener("DOMContentLoaded", function() {
         return rate;
     }
 
-    // Função para validar e formatar a entrada
-    function validateAmount(value) {
-        // Remove caracteres não numéricos, exceto a vírgula e pontos decimais
-        const sanitizedValue = value.replace(/[^0-9.,]/g, '');
-
-        // Verifica se a entrada contém apenas números e, no máximo, duas casas decimais
-        const regex = /^\d+(\.\d{1,2})?$/;
-        if (regex.test(sanitizedValue)) {
-            // Formata o valor para duas casas decimais
-            return parseFloat(sanitizedValue).toFixed(2);
-        }
-        return null;
-    }
-
     // Evento de clique no botão de converter
     convertBtn.addEventListener('click', async function() {
         const amountText = amountInput.value.trim();
         const from = fromCurrency.value;
         const to = toCurrency.value;
 
-        // Valida e formata o valor inserido
-        const amount = validateAmount(amountText);
+        // Verifica se o valor começa com "-"
+        if (amountText.startsWith("-")) {
+            resultDiv.textContent = 'O valor não pode ser negativo.';
+            return;
+        }
+
+        // Remove caracteres não numéricos, exceto a vírgula e pontos decimais
+        const sanitizedValue = amountText.replace(/[^0-9.,]/g, '');
+
+        // Verifica se a entrada contém apenas números e, no máximo, duas casas decimais
+        const regex = /^\d+(\.\d{1,2})?$/;
+        if (!regex.test(sanitizedValue)) {
+            resultDiv.textContent = 'Por favor, insira um valor válido.';
+            return;
+        }
+
+        const amount = parseFloat(sanitizedValue);
+        if (amount <= 0) {
+            resultDiv.textContent = 'O valor deve ser maior que 0.';
+            return;
+        }
 
         if (from === to) {
             resultDiv.textContent = 'Por favor, selecione moedas diferentes.';
-            return; // Interrompe a execução se as moedas forem iguais
+            return;
         }
 
-        if (amount > 0 || amount == null) 
-        {
-            if (amount && from && to) {
-                const rate = await fetchExchangeRate(from, to);
-                const convertedAmount = (parseFloat(amount) * rate).toFixed(2);
-                resultDiv.textContent = `${convertedAmount} ${to}`;
-            } else {
-                resultDiv.textContent = 'Por favor, insira um valor válido.';
-            }
-        }
-        else 
-        {
-            resultDiv.textContent = 'Por favor, insira um valor maior que 0.';
+        if (from && to) {
+            const rate = await fetchExchangeRate(from, to);
+            const convertedAmount = (amount * rate).toFixed(2);
+            resultDiv.textContent = `${amount.toFixed(2)} ${from} = ${convertedAmount} ${to}`;
+        } else {
+            resultDiv.textContent = 'Por favor, insira um valor válido e selecione as moedas.';
         }
     });
 
