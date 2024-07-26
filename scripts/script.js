@@ -1,12 +1,9 @@
-// scripts.js
-
 document.addEventListener("DOMContentLoaded", function() {
     const amountInput = document.getElementById('amount');
     const fromCurrency = document.getElementById('fromCurrency');
     const toCurrency = document.getElementById('toCurrency');
     const convertBtn = document.getElementById('convertBtn');
     const resultDiv = document.getElementById('result');
-    const apiKey = 'YOUR_API_KEY'; // Substitua por sua chave de API
 
     // Função para buscar a lista de moedas
     async function fetchCurrencies() {

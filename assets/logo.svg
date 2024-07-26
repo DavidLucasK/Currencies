@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- Fundo Branco -->
+  <rect width="300" height="100" fill="#FFFFFF"/>
+
+  <!-- Símbolo -->
+  <g fill="none" stroke="black" stroke-width="4" transform="rotate(-270 50 50)">
+    <!-- C quase formando um círculo -->
+    <path d="M 50 50 A 40 40 0 1 1 90 50" stroke-linecap="round"/>
+    <!-- c menor dentro do C -->
+    <path d="M 60 50 A 20 20 0 1 1 80 50" stroke-linecap="round"/>
+  </g>
+
+  <!-- Texto -->
+  <text x="150" y="85" font-family="Arial, sans-serif" font-size="36" fill="black" text-anchor="middle" font-weight="bold">
+    Coinverter
+  </text>
+</svg>

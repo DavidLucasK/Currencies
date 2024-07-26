@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  animation: gradient 10s ease infinite;
-  background: linear-gradient(90deg, #190555, #340ea5, #7b30d0, #190555) no-repeat;
+  animation: gradient 8s ease infinite;
+  background: linear-gradient(90deg, #7e2907, #a5450e, #d07030, #7e2907) no-repeat;
   background-size: 200% 200%;
   color: white;
   overflow-y: hidden;
@@ -15,18 +20,17 @@ body {
 img {
   filter: invert();
   max-width: 100px;
-  margin-bottom: 150px;
+  transform: scale(200%);
 }
 
 .container {
   background-color: #fff;
-  align-content: center;
   padding: 50px;
   background: var(--cores-cinza-dark, #1E1F28);
   box-shadow: 0px -3px 22px 0px rgba(0, 0, 0, 0.35);
-  max-width: 500px; /* Definido para não ultrapassar 500px */
-  width: 20%; /* Largura padrão em porcentagem */
-  height: 75%;
+  max-width: 500px; 
+  width: 20%;
+  height: 60%;
   border-radius: 8px;
   box-shadow: 0 0 30px black;
   text-align: center;
@@ -37,21 +41,24 @@ h1 {
 }
 
 .field {
-  margin-bottom: 15px; /* Espaçamento aumentado */
+  margin-bottom: 15px;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
+  text-align: start;
+  font-size: 18px;
 }
 
 input[type="number"], select {
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  text-align: center;
+  text-align: start;
   font-size: 16px;
+  font-weight: 600;
   box-sizing: border-box;
   background-color: #f9f9f9;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -63,14 +70,14 @@ input[type="number"], select {
 
 
 input[type="number"]:focus, select:focus {
-  border-color: #7b30d0;
-  box-shadow: 0 0 5px #7b30d0;
+  border-color: #d07030;
+  box-shadow: 0 0 5px #d07030;
   outline: none;
 }
 
 input[type="number"]:hover, select:hover {
-  border-color: #7b30d0;
-  box-shadow: 0 0 5px #7b30d0;
+  border-color: #d07030;
+  box-shadow: 0 0 5px #d07030;
   outline: none;
 }
 
@@ -84,9 +91,10 @@ select {
 
 button {
   padding: 10px 20px;
+  margin-top: 7%;
   border: none;
   border-radius: 4px;
-  background-color: #7b30d0;
+  background-color: #d83f19;
   opacity: 1;
   color: #fff;
   cursor: pointer;
@@ -111,6 +119,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+/* Keyframe para background */
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -133,6 +142,8 @@ input::-webkit-inner-spin-button {
 
   img {
     width: 100px;
+    margin-bottom: 7%;
+    margin-top: 7%;
   }
 
   h1 {
@@ -141,11 +152,11 @@ input::-webkit-inner-spin-button {
 
   input[type="number"], select {
     font-size: 14px;
-    padding: 8px;
+    padding: 16px;
   }
 
   button {
-    padding: 8px 16px;
+    padding: 20px 50px;
     font-size: 14px;
   }
 
@@ -163,6 +174,8 @@ input::-webkit-inner-spin-button {
 
   img {
     width: 100px;
+    margin-bottom: 7%;
+    margin-top: 7%;
   }
 
   h1 {
@@ -171,12 +184,13 @@ input::-webkit-inner-spin-button {
 
   input[type="number"], select {
     font-size: 14px;
-    padding: 8px;
+    padding: 12px;
   }
 
   button {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 20px 50px;
+    font-size: 18px;
+    margin-top: 10%;
   }
 
   #result {
@@ -194,6 +208,8 @@ input::-webkit-inner-spin-button {
 
   img {
     width: 100px;
+    margin-bottom: 7%;
+    margin-top: 10%;
   }
 
   h1 {
@@ -202,12 +218,13 @@ input::-webkit-inner-spin-button {
 
   input[type="number"], select {
     font-size: 12px;
-    padding: 6px;
+    padding: 12px;
   }
 
   button {
-    padding: 6px 12px;
-    font-size: 12px;
+    padding: 20px 50px;
+    font-size: 18px;
+    margin-top: 10%;
   }
 
   #result {

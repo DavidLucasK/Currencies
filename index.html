@@ -5,18 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moedas</title>
     <link rel="stylesheet" href="./css/currency.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-      <a href="https://davidlucas.vercel.app/" rel="noopener noreferrer" target="_blank">
-        <img src="./assets/Logo-rounded.png" alt="Logo">
-      </a>
-        <h1>Conversor de Moedas</h1>
+        <a href="https://davidlucas.vercel.app/" rel="noopener noreferrer" target="_blank">
+            <img src="./assets/Coinverter.png" alt="Logo">
+        </a>
         <div class="converter">
-            <div class="field">
-                <label for="amount">Valor:</label>
-                <input type="number" min="0" id="amount" placeholder="Digite o valor" required>
-            </div>
             <div class="field">
                 <label for="fromCurrency">De:</label>
                 <select id="fromCurrency">
@@ -26,6 +23,10 @@
                 <label for="toCurrency">Para:</label>
                 <select id="toCurrency">
                 </select>
+            </div>
+            <div class="field">
+                <label for="amount">Valor</label>
+                <input type="number" min="0" id="amount" placeholder="Digite o valor" required>
             </div>
             <button id="convertBtn">Converter</button>
         </div>
