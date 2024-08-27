@@ -10,10 +10,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  animation: gradient 8s ease infinite;
-  background: linear-gradient(90deg, #7e2907, #a5450e, #d07030, #7e2907) no-repeat;
-  background-size: 200% 200%;
-  color: white;
+  background: linear-gradient(90deg, #0077B6, #00B4D8, #90E0EF, #CAF0F8, #90E0EF, #00B4D8, #0077B6) no-repeat;
+  color: #EEEEEE;
   overflow-y: hidden;
 }
 
@@ -24,10 +22,10 @@ img {
 }
 
 .container {
-  background-color: #fff;
+  background-color: #EEEEEE;
   padding: 50px;
-  background: var(--cores-cinza-dark, #1E1F28);
-  box-shadow: 0px -3px 22px 0px rgba(0, 0, 0, 0.35);
+  background: var(--cores-cinza-dark, #364758);
+  box-shadow: 0px -3px 22px 0px #222831;
   max-width: 500px; 
   width: 20%;
   height: 60%;
@@ -55,29 +53,30 @@ input[type="number"], select {
   width: 100%;
   padding: 15px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #EEEEEE;
+  color: #222831;
   text-align: start;
   font-size: 16px;
   font-weight: 600;
   box-sizing: border-box;
-  background-color: #f9f9f9;
+  background-color: #EEEEEE;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 #fromCurrency, #toCurrency {
-  background-color: #f9f9f9;
+  background-color: #EEEEEE;
 }
 
 
 input[type="number"]:focus, select:focus {
-  border-color: #d07030;
-  box-shadow: 0 0 5px #d07030;
+  border-color: #00B4D8;
+  box-shadow: 0 0 5px #00B4D8;
   outline: none;
 }
 
 input[type="number"]:hover, select:hover {
-  border-color: #d07030;
-  box-shadow: 0 0 5px #d07030;
+  border-color: #00B4D8;
+  box-shadow: 0 0 5px #00B4D8;
   outline: none;
 }
 
@@ -94,16 +93,16 @@ button {
   margin-top: 7%;
   border: none;
   border-radius: 4px;
-  background-color: #d83f19;
+  background-color: #0077B6;
   opacity: 1;
-  color: #fff;
+  color: #EEEEEE;
   cursor: pointer;
   font-size: 16px;
   transition: 0.2s ease-in-out;
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: #00B4D8;
 }
 
 #result {
