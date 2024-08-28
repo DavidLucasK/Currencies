@@ -10,7 +10,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(90deg, #0077B6, #00B4D8, #90E0EF, #CAF0F8, #90E0EF, #00B4D8, #0077B6) no-repeat;
+  background: linear-gradient(90deg, #026969, #0c7e78, #169384, #1fa28d, #2bbb99, #32cd9e, #49d59f, #60dda4, #76e5aa, #8cedb0) no-repeat;
   color: #EEEEEE;
   overflow-y: hidden;
 }
@@ -24,7 +24,7 @@ img {
 .container {
   background-color: #EEEEEE;
   padding: 50px;
-  background: var(--cores-cinza-dark, #364758);
+  background: var(--cores-cinza-dark, #20504e);
   box-shadow: 0px -3px 22px 0px #222831;
   max-width: 500px; 
   width: 20%;
@@ -69,14 +69,14 @@ input[type="number"], select {
 
 
 input[type="number"]:focus, select:focus {
-  border-color: #00B4D8;
-  box-shadow: 0 0 5px #00B4D8;
+  border-color: #2bbb99;
+  box-shadow: 0 0 5px #2bbb99;
   outline: none;
 }
 
 input[type="number"]:hover, select:hover {
-  border-color: #00B4D8;
-  box-shadow: 0 0 5px #00B4D8;
+  border-color: #2bbb99;
+  box-shadow: 0 0 5px #2bbb99;
   outline: none;
 }
 
@@ -93,7 +93,7 @@ button {
   margin-top: 7%;
   border: none;
   border-radius: 4px;
-  background-color: #0077B6;
+  background-color: #169384;
   opacity: 1;
   color: #EEEEEE;
   cursor: pointer;
@@ -102,7 +102,7 @@ button {
 }
 
 button:hover {
-  background-color: #00B4D8;
+  background-color: #0c7e78;
 }
 
 #result {
